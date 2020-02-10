@@ -34,6 +34,7 @@ public class ReferralUtil {
         task.setForEntity(referralTask.getEvent().getBaseEntityId());
         DateTime now = new DateTime();
         task.setExecutionStartDate(now);
+        task.setReasonReference(referralTask.getEvent().getEventId());
         task.setAuthoredOn(now);
         task.setLastModified(now);
         task.setOwner(allSharedPreferences.fetchRegisteredANM());
